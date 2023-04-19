@@ -1,0 +1,5 @@
+package Hello.jenkins.test;
+
+public class TestClass {
+    private Long id;
+}

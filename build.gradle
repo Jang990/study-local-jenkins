@@ -2,6 +2,7 @@ plugins {
 	id 'java'
 	id 'org.springframework.boot' version '2.7.3'
 	id 'io.spring.dependency-management' version '1.1.0'
+	id "com.gorylenko.gradle-git-properties" version "2.4.1" // git 모니터링을 위한 플러그인
 }
 
 group = 'Hello'
@@ -23,6 +24,10 @@ dependencies {
 	compileOnly 'org.projectlombok:lombok'
 	annotationProcessor 'org.projectlombok:lombok'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+
+	// 모니터링 추가
+	implementation 'org.springframework.boot:spring-boot-starter-actuator' //actuator 추가
+	implementation 'io.micrometer:micrometer-registry-prometheus' // 프로메테우스 구현체 추가
 }
 
 tasks.named('test') {

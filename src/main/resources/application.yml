@@ -1,0 +1,10 @@
+management:
+  server:
+    port: 9292 # 모니터링 데이터 포트
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  info:
+    java:
+      enabled: true

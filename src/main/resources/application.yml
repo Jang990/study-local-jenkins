@@ -1,4 +1,7 @@
 management:
+  tomcat: # 톰캣은 기본적으로 세션과 관련된 정보마늘 제공한다.
+    mbeanregistry:
+      enabled: true # 이걸 키면 톰캣에 관한 수많은 메트릭이 추가된다.
   server:
     port: 9292 # 모니터링 데이터 포트
   endpoints:
